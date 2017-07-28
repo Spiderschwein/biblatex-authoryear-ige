@@ -1,0 +1,19 @@
+\ProvidesFile{authoryear-ige.bbx}
+\RequireBibliographyStyle{authoryear}
+
+\DefineBibliographyStrings{ngerman}
+{
+andothers={et\addabbrvspace al\adddot},
+urlseen={Abgerufen am:}
+}
+
+\renewcommand*{\multinamedelim}{\addslash}
+
+\renewbibmacro*{bibindex}{\usebibmacro{cite}\newline}
+
+%\Declar\textsc{eBibliographyDriver{book}{%
+%  \usebibmacro{bibindex}%
+%  \usebibmacro{cite}%
+%  \newline%
+%  \usebibmacro{maintitle+title}%
+%}%
