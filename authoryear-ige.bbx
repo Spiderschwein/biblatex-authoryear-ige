@@ -7,7 +7,7 @@ andothers={et\addabbrvspace al\adddot},
 urlseen={Abgerufen am:}
 }
 
-\renewcommand*{\multinamedelim}{\addslash}
+
 
 \renewbibmacro*{bibindex}{\usebibmacro{cite}\newline}
 
@@ -26,7 +26,12 @@ urlseen={Abgerufen am:}
 \setcounter{biburllcpenalty}{7000}
 \setcounter{biburlucpenalty}{8000}
 
+% Sortierstiel Nachname, Vorname
+\DeclareNameAlias{sortname}{last-first}
 
+% Alle Autoren durch Slash trennen
+\renewcommand*{\multinamedelim}{\space\addslash }
+\renewcommand*{\finalnamedelim}{\space\addslash }
 
 %\Declar\textsc{eBibliographyDriver{book}{%
 %  \usebibmacro{bibindex}%
