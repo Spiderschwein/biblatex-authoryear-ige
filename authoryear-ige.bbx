@@ -11,6 +11,23 @@ urlseen={Abgerufen am:}
 
 \renewbibmacro*{bibindex}{\usebibmacro{cite}\newline}
 
+\renewcommand*{\nameyeardelim}{\space}
+
+
+% Schreibweise mit : vor Seitenzahl
+
+\renewcommand*{\postnotedelim}{\addcolon\space}
+\DeclareFieldFormat{postnote}{#1}
+
+% Abstand zwischen den Bibliografie-Einträgen
+\setlength{\bibitemsep}{1\baselineskip} 
+
+% Magie, damit im Literaturverzeichnis der Blocksatz eingehalten wird.
+\setcounter{biburllcpenalty}{7000}
+\setcounter{biburlucpenalty}{8000}
+
+
+
 %\Declar\textsc{eBibliographyDriver{book}{%
 %  \usebibmacro{bibindex}%
 %  \usebibmacro{cite}%
