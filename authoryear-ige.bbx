@@ -1,14 +1,29 @@
 \ProvidesFile{authoryear-ige.bbx}
 \RequireBibliographyStyle{authoryear}
 
+
+
+% Eigener Stil für @movie
+
+\DeclareBibliographyDriver{movie}{%
+	\usebibmacro{bibindex}
+	\usebibmacro{author/editor+others/translator+others}
+    \printfield{title}%
+    \newunit\newblock
+    \usebibmacro{publisher+location+date}
+    \newunit\newblock
+	\printfield{type}
+    \newunit\newblock
+	\usebibmacro{note+pages}
+    \finentry}
+
+
 \DefineBibliographyStrings{ngerman}
 {
 andothers={et\addabbrvspace al\adddot},
-urlseen={Abgerufen am:}
-editor = {\mkbibparens{Hrsg.}}
+urlseen={Abgerufen am:},
+byeditor = {\mkbibparens{Hrsg.}:}
 }
-
-
 
 
 \renewbibmacro*{bibindex}{\setcounter{maxnames}{2}\usebibmacro{cite}\newline\setcounter{maxnames}{99}}
@@ -29,8 +44,14 @@ editor = {\mkbibparens{Hrsg.}}
 \setcounter{biburlucpenalty}{8000}
 
 % Sortierstiel Nachname, Vorname
-\DeclareNameAlias{sortname}{last-first}
+\DeclareNameAlias{default}{last-first}
 
 % Alle Autoren durch Slash trennen
 \renewcommand*{\multinamedelim}{\space\slash\space}
 \renewcommand*{\finalnamedelim}{\space\slash\space}
+
+
+
+
+
+
