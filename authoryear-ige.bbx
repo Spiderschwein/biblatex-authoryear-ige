@@ -50,7 +50,12 @@ byeditor = {\mkbibparens{Hrsg.}:}
 \renewcommand*{\multinamedelim}{\space\slash\space}
 \renewcommand*{\finalnamedelim}{\space\slash\space}
 
+% Fallback-Lösung urldate bei der Datumsangabe entfernt
+\DeclareLabeldate{\field{date}\field{eventdate} \field{origdate}\literal{nodate}}
 
+% Seitenumbruch in Quellen verhindern
+\renewcommand*{\bibfont}{\interlinepenalty 10000\relax}
+ 
 
 
 
